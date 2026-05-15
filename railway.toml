@@ -1,0 +1,7 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend"
+
+[deploy]
+startCommand = "NODE_ENV=production node backend/server.js"
+healthcheckPath = "/"
